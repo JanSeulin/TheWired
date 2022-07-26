@@ -5,6 +5,11 @@ import './sign-in.styles.scss';
 import FormInput from '../reusable/form-input/form-input.component';
 import CustomButton from '../reusable/custom-button/custom-button.component';
 
+import {
+  signInWithGooglePopup,
+  createUserDocumentFromAuth,
+} from '../../utils/firebase/firebase.utils';
+
 // import { auth, signInWithGoogle } from '../../firebase/firebase.utils';
 
 const SignIn = () => {
@@ -32,8 +37,9 @@ const SignIn = () => {
     // }
   };
 
-  const signInWithGoogle = () => {
-    console.log('Sign in with google');
+  const signInWithGoogle = async () => {
+    const { user } = await signInWithGooglePopup();
+    const userDocRef = await createUserDocumentFromAuth(user);
   };
 
   return (

@@ -3,18 +3,36 @@
   flex-direction: column;
   margin: 4rem 3rem;
 
+  .text-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .title {
+      font-size: 2.8rem;
+      // color: #05b21e;
+      color: white;
+      // text-align: left;
+    }
+
+    .see-all {
+      color: white;
+      font-size: 2rem;
+      display: flex;
+      gap: 0.3rem;
+    }
+
+    .arrow-right {
+      color: white;
+      width: 2rem;
+    }
+  }
+
   .preview {
     // width: 80%;
     display: flex;
     justify-content: space-between;
     gap: 3rem;
-  }
-
-  .title {
-    font-size: 2.8rem;
-    // color: #05b21e;
-    color: white;
-    // text-align: left;
   }
 }
 
