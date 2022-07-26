@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/TheWired/static/css/main.9e4bb525.css",
-    "main.js": "/TheWired/static/js/main.6b19ec88.js",
+    "main.css": "/TheWired/static/css/main.c65573f6.css",
+    "main.js": "/TheWired/static/js/main.a2278acf.js",
     "static/media/wire.svg": "/TheWired/static/media/wire.94af883570857fe27b02.svg",
     "static/media/cpu-logo.svg": "/TheWired/static/media/cpu-logo.80f39478ccdd809c0156c6c82a5692bc.svg",
     "index.html": "/TheWired/index.html",
-    "main.9e4bb525.css.map": "/TheWired/static/css/main.9e4bb525.css.map",
-    "main.6b19ec88.js.map": "/TheWired/static/js/main.6b19ec88.js.map"
+    "static/media/arrow-forward-outline.svg": "/TheWired/static/media/arrow-forward-outline.3abe6c09c947449e1a780d824ff284ab.svg",
+    "main.c65573f6.css.map": "/TheWired/static/css/main.c65573f6.css.map",
+    "main.a2278acf.js.map": "/TheWired/static/js/main.a2278acf.js.map"
   },
   "entrypoints": [
-    "static/css/main.9e4bb525.css",
-    "static/js/main.6b19ec88.js"
+    "static/css/main.c65573f6.css",
+    "static/js/main.a2278acf.js"
   ]
 }
