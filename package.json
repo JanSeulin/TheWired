@@ -1,7 +1,7 @@
 {
   "name": "the-wired",
   "version": "0.1.0",
-  "homepage": "https://janseulin.github.io/TheWired--Hardware-shop/",
+  "homepage": "https://janseulin.github.io/TheWired/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",

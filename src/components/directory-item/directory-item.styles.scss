@@ -27,7 +27,15 @@
       background-color: #003708;
 
       & .subtitle {
-        display: inline-block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.6rem;
+
+        .arrow-icon {
+          display: inline-block;
+          width: 2rem;
+        }
       }
 
       & .title {
