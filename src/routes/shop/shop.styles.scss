@@ -1,0 +1,10 @@
+.shop-page {
+  padding: 2rem 2rem 4rem 2rem;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+@media (max-width: 720px) {
+  .shop-page {
+    padding: 1rem 0 0 0;
+  }
+}

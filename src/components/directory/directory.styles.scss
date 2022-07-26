@@ -1,0 +1,23 @@
+.directory-menu {
+  // width: 95%;
+  width: 95vw;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 4rem;
+  margin: 10vh 0;
+}
+
+@media (max-width: 1024px) {
+  .directory-menu {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 5vh 0;
+  }
+}
+
+@media (max-width: 720px) {
+  .directory-menu {
+    row-gap: 2rem;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

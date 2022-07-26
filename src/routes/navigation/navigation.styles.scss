@@ -1,0 +1,90 @@
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  // margin: 3rem 8rem;
+  padding: 6rem 8rem 5rem 8rem;
+  height: 7rem;
+  background-color: rgb(22, 22, 22);
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    background-color: #005d0e;
+    height: 0.2rem;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+  }
+
+  .logo-container {
+    max-width: 25vw;
+    // max-height: 15rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .logo {
+      width: 6rem;
+    }
+
+    .logo-text {
+      // color: #2d527c;
+      font-family: 'Share Tech Mono', monospace;
+      color: #05b21e;
+      font-size: 2.4rem;
+    }
+  }
+
+  .menu-options {
+    max-width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0rem;
+
+    & span {
+      color: white;
+      margin-right: 4rem;
+      font-size: 1.6rem;
+    }
+
+    .option {
+      color: white;
+      font-size: 1.6rem;
+      padding: 0.8rem 1.8rem;
+      // border-radius: 0.5rem;
+      background-color: rgba(0, 93, 14, 0.5);
+      border: 0.1rem solid #005d0e;
+      transition: 0.3s all;
+
+      &:hover {
+        color: #005d0e;
+        background-color: #05b21e;
+        opacity: 1;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media (max-width: 720px) {
+  .header {
+    padding: 5rem 2rem 5rem 2rem;
+    display: block;
+
+    .logo-container {
+      position: absolute;
+      max-width: 50vw;
+      top: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .menu-options {
+      display: none;
+    }
+  }
+}
