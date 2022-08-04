@@ -4,35 +4,56 @@ import './sign-up.styles.scss';
 
 import FormInput from '../reusable/form-input/form-input.component';
 import CustomButton from '../reusable/custom-button/custom-button.component';
+import {
+  createUserDocumentFromAuth,
+  createAuthUserWithEmailAndPassword,
+} from '../../utils/firebase/firebase.utils';
+
+const defaultFormFields = {
+  displayName: '',
+  email: '',
+  password: '',
+  confirmPassword: '',
+};
 
 const SignUp = () => {
-  const [displayName, setDisplayName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
+  const [formFields, setFormFields] = useState(defaultFormFields);
+  const { displayName, email, password, confirmPassword } = formFields;
+
+  const resetFormFields = () => {
+    setFormFields(defaultFormFields);
+  };
 
   const handleSubmit = async e => {
     e.preventDefault();
-    setDisplayName('');
-    setEmail('');
-    setPassword('');
-    setConfirmPassword('');
+
+    if (password !== confirmPassword) {
+      alert('Passwords do not match');
+      return;
+    }
+
+    try {
+      const { user } = await createAuthUserWithEmailAndPassword(
+        email,
+        password
+      );
+
+      await createUserDocumentFromAuth(user, { displayName });
+
+      resetFormFields();
+    } catch (error) {
+      if (error.code === 'auth/email-already-in-use') {
+        alert('Cannot create user, email already in use');
+      } else {
+        console.log('error creating user', error);
+      }
+    }
   };
 
-  const handleName = e => {
-    setDisplayName(e.target.value);
-  };
+  const handleChange = e => {
+    const { name, value } = e.target;
 
-  const handleEmail = e => {
-    setEmail(e.target.value);
-  };
-
-  const handlePassword = e => {
-    setPassword(e.target.value);
-  };
-
-  const handleConfirmPassword = e => {
-    setConfirmPassword(e.target.value);
+    setFormFields({ ...formFields, [name]: value });
   };
 
   return (
@@ -44,7 +65,7 @@ const SignUp = () => {
           type="email"
           name="email"
           value={email}
-          onChange={handleEmail}
+          onChange={handleChange}
           label="Email"
           required
         />
@@ -52,7 +73,7 @@ const SignUp = () => {
           type="password"
           name="password"
           value={password}
-          onChange={handlePassword}
+          onChange={handleChange}
           label="Password"
           required
         />
@@ -60,7 +81,7 @@ const SignUp = () => {
           type="password"
           name="confirmPassword"
           value={confirmPassword}
-          onChange={handleConfirmPassword}
+          onChange={handleChange}
           label="Confirm Password"
           required
         />
@@ -68,7 +89,7 @@ const SignUp = () => {
           type="text"
           name="displayName"
           value={displayName}
-          onChange={handleName}
+          onChange={handleChange}
           label="Display Name"
           required
         />

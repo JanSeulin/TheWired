@@ -27,14 +27,14 @@
     gap: 1rem;
 
     .logo {
-      width: 6rem;
+      width: 5rem;
     }
 
     .logo-text {
       // color: #2d527c;
       font-family: 'Share Tech Mono', monospace;
       color: #05b21e;
-      font-size: 2.4rem;
+      font-size: 2.2rem;
     }
   }
 
@@ -53,7 +53,7 @@
 
     .option {
       color: white;
-      font-size: 1.6rem;
+      font-size: 1.4rem;
       padding: 0.8rem 1.8rem;
       // border-radius: 0.5rem;
       background-color: rgba(0, 93, 14, 0.5);
@@ -81,12 +81,19 @@
       top: 2rem;
       // left: 50%;
       // transform: translateX(-50%);
+      .logo-text {
+        // color: #2d527c;
+        font-family: 'Share Tech Mono', monospace;
+        color: #05b21e;
+        font-size: 1.8rem;
+      }
     }
 
     .menu-options {
       // display: none;
       .option {
         padding: 1rem 0.8rem;
+        font-size: 1.2rem;
       }
     }
   }

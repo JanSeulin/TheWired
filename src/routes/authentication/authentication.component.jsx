@@ -1,15 +1,15 @@
-import './sign-in-up.styles.scss';
+import './authentication.styles.scss';
 
 import SignIn from '../../components/sign-in/sign-in.component';
 import SignUp from '../../components/sign-up/sign-up.component';
 
-const SignInUp = () => {
+const Authentication = () => {
   return (
-    <div className="sign-in-up--container">
+    <div className="authentication-container">
       <SignIn />
       <SignUp />
     </div>
   );
 };
 
-export default SignInUp;
+export default Authentication;

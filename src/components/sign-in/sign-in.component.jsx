@@ -8,26 +8,47 @@ import CustomButton from '../reusable/custom-button/custom-button.component';
 import {
   signInWithGooglePopup,
   createUserDocumentFromAuth,
+  signInWithAuthUserWithEmailAndPassword,
 } from '../../utils/firebase/firebase.utils';
 
 // import { auth, signInWithGoogle } from '../../firebase/firebase.utils';
 
+const defaultFormFields = {
+  email: '',
+  password: '',
+};
+
 const SignIn = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [formFields, setFormFields] = useState(defaultFormFields);
+  const { email, password } = formFields;
 
-  const handleEmailChange = e => {
-    setEmail(e.target.value);
-  };
+  const handleChange = e => {
+    const { name, value } = e.target;
 
-  const handlePasswordChange = e => {
-    setPassword(e.target.value);
+    setFormFields({ ...formFields, [name]: value });
   };
 
   const handleSubmit = async e => {
     e.preventDefault();
 
-    console.log('handle submit - sign in');
+    try {
+      const response = await signInWithAuthUserWithEmailAndPassword(
+        email,
+        password
+      );
+      console.log(response);
+    } catch (error) {
+      switch (error.code) {
+        case 'auth/wrong-password':
+          alert('The entered password is incorrect');
+          break;
+        case 'auth/user-not-found':
+          alert('No user associated with entered email');
+          break;
+        default:
+          console.log(error);
+      }
+    }
 
     // try {
     //   await auth.signInWithEmailAndPassword(email, password);
@@ -39,7 +60,7 @@ const SignIn = () => {
 
   const signInWithGoogle = async () => {
     const { user } = await signInWithGooglePopup();
-    const userDocRef = await createUserDocumentFromAuth(user);
+    await createUserDocumentFromAuth(user);
   };
 
   return (
@@ -52,7 +73,7 @@ const SignIn = () => {
           type="email"
           label="Email"
           value={email}
-          handleChange={handleEmailChange}
+          handleChange={handleChange}
           required
         />
         <FormInput
@@ -60,7 +81,7 @@ const SignIn = () => {
           type="password"
           label="Password"
           value={password}
-          handleChange={handlePasswordChange}
+          handleChange={handleChange}
           required
         />
         <div className="buttons">

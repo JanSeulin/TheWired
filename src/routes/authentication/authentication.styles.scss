@@ -1,4 +1,4 @@
-.sign-in-up--container {
+.authentication-container {
   margin: 8rem auto;
   // padding: 8rem 0;
   width: 80%;
@@ -23,7 +23,7 @@
 //   transform: translateY(-50%);
 // }
 @media (max-width: 720px) {
-  .sign-in-up--container {
+  .authentication {
     flex-direction: column;
     margin: 5rem auto;
   }
