@@ -24,7 +24,7 @@
   .buttons {
     margin-top: 5rem;
     display: flex;
-    gap: 2rem;
+    justify-content: space-around;
   }
 }
 
@@ -34,5 +34,9 @@
     margin: 2rem auto 3rem auto;
     text-align: center;
     align-items: center;
+
+    form {
+      width: 70%;
+    }
   }
 }

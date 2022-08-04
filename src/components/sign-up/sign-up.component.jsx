@@ -60,7 +60,7 @@ const SignUp = () => {
     <div className="sign-up--container">
       <h2 className="title">Create a new account</h2>
       <span>Sign up with your email and password</span>
-      <form onSubmit={handleSubmit} className="sign-up-form">
+      <form onSubmit={handleSubmit}>
         <FormInput
           type="email"
           name="email"
@@ -93,7 +93,9 @@ const SignUp = () => {
           label="Display Name"
           required
         />
-        <CustomButton type="submit">Sign Up</CustomButton>
+        <CustomButton className="custom-button" type="submit">
+          Sign Up
+        </CustomButton>
       </form>
     </div>
   );
