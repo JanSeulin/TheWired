@@ -1,13 +1,16 @@
 .custom-button {
   // min-width: 12rem;
   width: auto;
-  height: 5rem;
-  padding: 0 2.5rem 0 2.5rem;
-  font-size: 1.4rem;
+  max-width: 40vw;
+  min-height: 4rem;
+  padding: 0 5% 0 5%;
+  // font-size: 1.4rem;
+  font-size: clamp(0.6rem, 0.1vw + 1rem, 1.4rem);
+  white-space: nowrap;
   background-color: #005d0ea1;
 
   color: white;
-  text-transform: uppercase;
+  // text-transform: uppercase;
   font-family: 'Roboto Condensed', sans-serif;
   font-weight: bolder;
   border: 1px solid black;
@@ -23,11 +26,16 @@
   }
 
   &.google-sign-in {
-    background-color: #316fd4a1;
+    display: flex;
+    gap: 0.5vw;
+    background-color: #2d64bca1;
+    // background-color: white;
     color: white;
+    padding: 0 2% 0 2%;
 
     &:hover {
       background-color: #2a5dae;
+      color: white;
     }
   }
 }

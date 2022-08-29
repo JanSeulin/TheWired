@@ -1,6 +1,7 @@
 .directory-menu {
   // width: 95%;
-  width: 95vw;
+  width: 90vw;
+  max-width: 1980px;
   display: grid;
   justify-items: center;
   grid-template-columns: repeat(3, 1fr);

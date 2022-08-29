@@ -8,10 +8,10 @@ body {
   font-family: 'Roboto Condensed', sans-serif;
   /* padding: 2rem 6rem; */
   background-color: rgb(42, 42, 42);
-  background-image: url(./assets/wire.svg);
-  background-repeat: no-repeat;
+  /* background-image: url(./assets/wire.svg); */
+  /* background-repeat: no-repeat; */
   /* background-size: 100%; */
-  background-size: cover;
+  /* background-size: cover; */
 }
 
 a {

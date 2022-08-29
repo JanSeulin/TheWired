@@ -5,6 +5,7 @@ $sub-color: #aaa;
 @mixin shrinkLabel {
   top: -2rem;
   font-size: 1.6rem;
+  font-size: clamp(1rem, 0.2vw + 1rem, 1.6rem);
   color: $main-color;
 }
 
@@ -16,7 +17,8 @@ $sub-color: #aaa;
     background: none;
     // background-color: rgba(0, 0, 0, 0.675);
     color: $sub-color;
-    font-size: 1.8rem;
+    // font-size: 1.8rem;
+    font-size: clamp(1rem, 0.2vw + 1rem, 1.8rem);
     padding: 1rem 1rem 1rem 0.5rem;
     display: block;
     width: 90%;
@@ -40,7 +42,7 @@ $sub-color: #aaa;
 
   .form-input-label {
     color: $sub-color;
-    font-size: 1.4rem;
+    font-size: clamp(1rem, 0.2vw + 1rem, 1.8rem);
     font-weight: normal;
     position: absolute;
     pointer-events: none;

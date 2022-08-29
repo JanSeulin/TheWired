@@ -11,6 +11,8 @@ import {
   signInWithAuthUserWithEmailAndPassword,
 } from '../../utils/firebase/firebase.utils';
 
+import { ReactComponent as GoogleIcon } from '../../assets/icons8-google.svg';
+
 // import { auth, signInWithGoogle } from '../../firebase/firebase.utils';
 
 const defaultFormFields = {
@@ -87,7 +89,8 @@ const SignIn = () => {
         <div className="buttons">
           <CustomButton type="submit">Sign In</CustomButton>
           <CustomButton type="button" onClick={signInWithGoogle} isGoogleSignIn>
-            GOOGLE SIGN IN
+            <GoogleIcon className="google-icon" />
+            Sign in with Google
           </CustomButton>
         </div>
       </form>
