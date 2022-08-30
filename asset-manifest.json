@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/TheWired/static/css/main.65e79f52.css",
-    "main.js": "/TheWired/static/js/main.aeb18dec.js",
+    "main.css": "/TheWired/static/css/main.f487d30b.css",
+    "main.js": "/TheWired/static/js/main.e0936d02.js",
     "static/media/cart.svg": "/TheWired/static/media/cart.b23e9c8d765f6d660521aa45cd55d7a1.svg",
     "static/media/cpu-logo.svg": "/TheWired/static/media/cpu-logo.80f39478ccdd809c0156c6c82a5692bc.svg",
     "static/media/icons8-google.svg": "/TheWired/static/media/icons8-google.9a7800d06783d80a1c12249a8ca58e9d.svg",
     "index.html": "/TheWired/index.html",
     "static/media/cart-outline.svg": "/TheWired/static/media/cart-outline.ec34e04f278866298777c9836305a693.svg",
     "static/media/arrow-forward-outline.svg": "/TheWired/static/media/arrow-forward-outline.3abe6c09c947449e1a780d824ff284ab.svg",
-    "main.65e79f52.css.map": "/TheWired/static/css/main.65e79f52.css.map",
-    "main.aeb18dec.js.map": "/TheWired/static/js/main.aeb18dec.js.map"
+    "main.f487d30b.css.map": "/TheWired/static/css/main.f487d30b.css.map",
+    "main.e0936d02.js.map": "/TheWired/static/js/main.e0936d02.js.map"
   },
   "entrypoints": [
-    "static/css/main.65e79f52.css",
-    "static/js/main.aeb18dec.js"
+    "static/css/main.f487d30b.css",
+    "static/js/main.e0936d02.js"
   ]
 }
