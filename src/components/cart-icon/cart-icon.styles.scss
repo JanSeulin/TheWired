@@ -1,0 +1,40 @@
+.cart-icon-container {
+  margin: 0 3rem 0 2vw;
+  width: 3rem;
+  // height: 3vw;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  .shopping-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    fill: white;
+  }
+
+  .item-count {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+
+    margin-right: 0;
+    position: absolute;
+    font-size: clamp(1rem, 0.2vw + 1rem, 1.6rem);
+    color: white;
+    padding: 0 0.4rem;
+    background-color: rgba(0, 93, 14);
+    border-radius: 50%;
+    color: green;
+    font-weight: bold;
+    top: 0;
+    left: 0;
+    transform: translate(115%, -30%);
+
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+  }
+}

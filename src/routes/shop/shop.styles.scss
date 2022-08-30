@@ -6,6 +6,12 @@
   // background-color: rgba(0, 0, 0, 0.2);
 }
 
+@media (max-width: 1600px) {
+  .shop-page {
+    width: 100%;
+  }
+}
+
 @media (max-width: 720px) {
   .shop-page {
     width: 95%;

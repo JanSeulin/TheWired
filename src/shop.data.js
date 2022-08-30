@@ -1,4 +1,4 @@
-export const SHOP_DATA = [
+export const PRODUCTS = [
   {
     id: 1,
     title: 'Motherboards',
@@ -246,14 +246,14 @@ export const SHOP_DATA = [
       },
       {
         id: 33,
-        name: 'Sony WH-1000XM4 Wireless Noise Canceling Headphones',
+        name: 'Sony WH-1000XM4 Wireless Noise Canceling  Headphones',
         imageUrl:
           'https://i.ibb.co/KbpgcGw/Sony-WH-1000-XM4-Wireless-Industry-Leading-Noise-Canceling-Overhead-Headphones.jpg',
         price: 348,
       },
       {
         id: 34,
-        name: 'Anker Soundcore Life Q20 Hybrid Active Noise Cancelling Headphones',
+        name: 'Anker Soundcore Life Q20 Hybrid ANC Headphones',
         imageUrl:
           'https://i.ibb.co/XYJf502/Anker-Soundcore-Life-Q20-Hybrid-Active.jpg',
         price: 56,

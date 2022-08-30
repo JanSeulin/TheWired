@@ -1,19 +1,16 @@
 import { useState } from 'react';
-
-import './sign-in.styles.scss';
-
-import FormInput from '../reusable/form-input/form-input.component';
-import CustomButton from '../reusable/custom-button/custom-button.component';
-
+import { useNavigate } from 'react-router-dom';
 import {
   signInWithGooglePopup,
   createUserDocumentFromAuth,
   signInWithAuthUserWithEmailAndPassword,
 } from '../../utils/firebase/firebase.utils';
 
+import FormInput from '../reusable/form-input/form-input.component';
+import CustomButton from '../reusable/custom-button/custom-button.component';
 import { ReactComponent as GoogleIcon } from '../../assets/icons8-google.svg';
 
-// import { auth, signInWithGoogle } from '../../firebase/firebase.utils';
+import './sign-in.styles.scss';
 
 const defaultFormFields = {
   email: '',
@@ -23,6 +20,11 @@ const defaultFormFields = {
 const SignIn = () => {
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { email, password } = formFields;
+  const navigate = useNavigate();
+
+  const resetFormFields = () => {
+    setFormFields(defaultFormFields);
+  };
 
   const handleChange = e => {
     const { name, value } = e.target;
@@ -34,11 +36,9 @@ const SignIn = () => {
     e.preventDefault();
 
     try {
-      const response = await signInWithAuthUserWithEmailAndPassword(
-        email,
-        password
-      );
-      console.log(response);
+      await signInWithAuthUserWithEmailAndPassword(email, password);
+      resetFormFields();
+      navigate('/');
     } catch (error) {
       switch (error.code) {
         case 'auth/wrong-password':
@@ -61,8 +61,9 @@ const SignIn = () => {
   };
 
   const signInWithGoogle = async () => {
-    const { user } = await signInWithGooglePopup();
-    await createUserDocumentFromAuth(user);
+    await signInWithGooglePopup();
+
+    navigate('/');
   };
 
   return (

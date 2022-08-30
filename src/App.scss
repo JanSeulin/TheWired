@@ -1,0 +1,52 @@
+html {
+  /* 62.5% = 1REM = 10px */
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  /* padding: 2rem 6rem; */
+  background-color: rgb(42, 42, 42);
+  /* background-color: #111111; */
+  animation: scroll 1200s linear infinite;
+  background: url('https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'),
+    #111111;
+  color: #eee;
+  height: 100vh;
+  min-width: 360px;
+  width: 100%;
+  perspective: 1000px;
+  perspective-origin: 50% 50%;
+
+  &::-webkit-scrollbar {
+    width: 0.4rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(209, 209, 209, 0.3);
+    // background-color: rgb(3, 62, 3);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgb(139, 139, 139);
+    outline: 1px solid rgb(130, 136, 131);
+  }
+}
+
+@keyframes scroll {
+  100% {
+    background-position: 0px -3000px;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80 */
