@@ -82,5 +82,15 @@
 @media (max-width: 720px) {
   .checkout-container {
     width: 96%;
+
+    .checkout-header {
+      .header-block-description {
+        width: 35%;
+      }
+
+      .header-block-quantity {
+        width: 12%;
+      }
+    }
   }
 }

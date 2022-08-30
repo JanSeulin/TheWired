@@ -12,9 +12,22 @@ const CartIcon = () => {
     setIsCartOpen(!isCartOpen);
   };
 
+  const clickOutsideHandler = event => {
+    const isClicked = document
+      .querySelector('.cart-icon-container')
+      .contains(event.target);
+
+    console.log('clicked on icon?', isClicked);
+    if (!isClicked) {
+      setIsCartOpen(false);
+    }
+  };
+
+  document.addEventListener('click', clickOutsideHandler);
+
   return (
-    <div className="cart-icon-container">
-      <ShoppingIcon className="shopping-icon" onClick={toggleCartStatus} />
+    <div className="cart-icon-container" onClick={toggleCartStatus}>
+      <ShoppingIcon className="shopping-icon" />
       <span className="item-count">{cartCount}</span>
     </div>
   );

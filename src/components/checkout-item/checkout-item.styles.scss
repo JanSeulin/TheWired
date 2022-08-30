@@ -35,10 +35,6 @@
     // font-size: 1.2rem;
   }
 
-  .quantity {
-    width: 17%;
-  }
-
   .price {
     width: 23%;
   }
@@ -46,6 +42,7 @@
   .quantity {
     display: flex;
     justify-content: center;
+    width: 17%;
 
     .arrow {
       cursor: pointer;
@@ -58,7 +55,7 @@
     }
 
     .value {
-      margin: 0 10px;
+      margin: 0 1rem;
     }
   }
 
@@ -80,6 +77,33 @@
 @media (max-width: 1024px) {
   .checkout-item-container {
     min-height: 10rem;
+
+    .name {
+      width: 35%;
+    }
+
+    .image-container {
+      img {
+        background-color: white;
+        width: 70%;
+        height: 70%;
+      }
+    }
+
+    .quantity {
+      display: flex;
+      justify-content: center;
+      gap: -2rem;
+      width: 12%;
+
+      .value {
+        margin: 0 0.2rem;
+      }
+
+      .arrow {
+        font-size: 1.4rem;
+      }
+    }
   }
 }
 // 21+30+17+23+8
