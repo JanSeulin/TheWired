@@ -1,8 +1,6 @@
 export const PRODUCTS = [
   {
-    id: 1,
     title: 'Motherboards',
-    routeName: 'motherboards',
     items: [
       {
         id: 1,
@@ -43,9 +41,7 @@ export const PRODUCTS = [
     ],
   },
   {
-    id: 2,
     title: 'CPUs',
-    routeName: 'cpus',
     items: [
       {
         id: 7,
@@ -86,9 +82,7 @@ export const PRODUCTS = [
     ],
   },
   {
-    id: 3,
     title: 'Graphic Cards',
-    routeName: 'gpus',
     items: [
       {
         id: 13,
@@ -134,9 +128,7 @@ export const PRODUCTS = [
     ],
   },
   {
-    id: 4,
     title: 'Memory',
-    routeName: 'memory',
     items: [
       {
         id: 19,
@@ -180,9 +172,7 @@ export const PRODUCTS = [
     ],
   },
   {
-    id: 5,
     title: 'Storage',
-    routeName: 'storage',
     items: [
       {
         id: 25,
@@ -226,9 +216,7 @@ export const PRODUCTS = [
     ],
   },
   {
-    id: 6,
     title: 'Peripherals',
-    routeName: 'peripherals',
     items: [
       {
         id: 31,

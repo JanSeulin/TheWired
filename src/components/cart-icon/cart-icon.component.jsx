@@ -17,7 +17,7 @@ const CartIcon = () => {
       .querySelector('.cart-icon-container')
       .contains(event.target);
 
-    console.log('clicked on icon?', isClicked);
+    // console.log('clicked on icon?', isClicked);
     if (!isClicked) {
       setIsCartOpen(false);
     }

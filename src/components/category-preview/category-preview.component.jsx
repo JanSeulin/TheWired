@@ -6,6 +6,7 @@ import './category-preview.styles.scss';
 import { ReactComponent as ArrowRight } from '../../assets/arrow-forward-outline.svg';
 
 const CategoryPreview = ({ title, items }) => {
+  // console.log(items);
   return (
     <div className="category-preview">
       <div className="text-container">

@@ -1,21 +1,20 @@
-import { useState, useContext } from 'react';
+import { useContext } from 'react';
 
 import CategoryPreview from '../../components/category-preview/category-preview.component';
 
-import { SHOP_DATA } from './shop.data';
-import { ProductsContext } from '../../context/products.context';
+import { CategoriesContext } from '../../context/categories.context';
 
 import './shop.styles.scss';
 
 const Shop = () => {
-  const [categories, setCategories] = useState(SHOP_DATA);
-  const { products } = useContext(ProductsContext);
+  const { categoriesMap } = useContext(CategoriesContext);
 
   return (
     <div className="shop-page">
-      {products.map(({ id, ...otherCategoryProps }) => (
-        <CategoryPreview key={id} {...otherCategoryProps} />
-      ))}
+      {Object.keys(categoriesMap).map(title => {
+        const products = categoriesMap[title];
+        return <CategoryPreview key={title} title={title} items={products} />;
+      })}
     </div>
   );
 };
