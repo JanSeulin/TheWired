@@ -1,12 +1,18 @@
-import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import './directory-item.styles.scss';
 
 import { ReactComponent as ArrowIcon } from '../../assets/arrow-forward-outline.svg';
 
-const DirectoryItem = ({ title, imageUrl, linkUrl }) => {
+const DirectoryItem = ({ title, imageUrl }) => {
+  const navigate = useNavigate();
+
+  const goToPageHandler = () => {
+    navigate(`shop/${title.toLowerCase()}`);
+  };
+
   return (
-    <div className="menu-item">
+    <div className="menu-item" onClick={goToPageHandler}>
       <div
         className="background-img"
         style={{ backgroundImage: `url(${imageUrl})` }}

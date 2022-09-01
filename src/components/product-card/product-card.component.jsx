@@ -1,23 +1,29 @@
 import { useContext } from 'react';
+import { useLocation } from 'react-router-dom';
 
 import CustomButton from '../reusable/custom-button/custom-button.component';
 
 import { CartContext } from '../../context/cart.context';
 import { ReactComponent as ShopCart } from '../../assets/cart-outline.svg';
 
-import './category-item.styles.scss';
+import './product-card.styles.scss';
 
-const CategoryItem = ({ item }) => {
+const ProductCard = ({ product }) => {
   const { addItemToCart, setIsCartOpen } = useContext(CartContext);
-  const { name, price, imageUrl } = item;
+  const { name, price, imageUrl } = product;
+  const location = useLocation();
 
   const addItemHandler = () => {
-    addItemToCart(item);
+    addItemToCart(product);
     setIsCartOpen(true);
   };
 
   return (
-    <div className="category-item">
+    <div
+      className={`${
+        location.pathname === '/shop' ? 'applyClass' : ''
+      } category-item`}
+    >
       <div
         className="image"
         style={{ backgroundImage: `url(${imageUrl})` }}
@@ -34,4 +40,4 @@ const CategoryItem = ({ item }) => {
   );
 };
 
-export default CategoryItem;
+export default ProductCard;

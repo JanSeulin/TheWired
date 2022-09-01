@@ -81,13 +81,15 @@
   }
 }
 
-@media (max-width: 1280px) {
-  .category-item {
-    &:last-child {
-      display: none;
-    }
-  }
-}
+// @media (max-width: 1280px) {
+//   .category-item {
+//     &.applyClass {
+//       &:last-child {
+//         display: none;
+//       }
+//     }
+//   }
+// }
 
 @media (max-width: 1024px) {
   .category-item {
@@ -101,11 +103,13 @@
   .category-item {
     height: 10vw;
 
-    &:nth-child(3) {
-      display: none;
-    }
-    &:last-child {
-      display: none;
+    &.applyClass {
+      &:nth-child(3) {
+        display: none;
+      }
+      &:last-child {
+        display: none;
+      }
     }
 
     .custom-button {
