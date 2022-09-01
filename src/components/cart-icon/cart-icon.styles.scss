@@ -38,3 +38,15 @@
     user-select: none; /* Standard */
   }
 }
+
+@media (max-width: 1280px) {
+  .cart-icon-container {
+    margin-right: 2rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .cart-icon-container {
+    margin-right: 1.2rem;
+  }
+}

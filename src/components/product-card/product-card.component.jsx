@@ -32,9 +32,8 @@ const ProductCard = ({ product }) => {
         <span className="name">{name}</span>
         <span className="price">${price}</span>
       </div>
-      <CustomButton id="add-to-cart" onClick={addItemHandler}>
-        Add to Cart
-        <ShopCart className="shop-cart-icon" />
+      <CustomButton id="add-to-cart " onClick={addItemHandler}>
+        + <ShopCart className="shop-cart-icon" />
       </CustomButton>
     </div>
   );
